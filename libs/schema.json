@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/schema",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "GenerateAngularLibrary",
   "title": "",
   "type": "object",
@@ -12,6 +12,19 @@
         "index": 0
       },
       "x-prompt": "What name would you like to use?"
+    },
+    "domain": {
+      "type": "string",
+      "description": "Domain of the Library",
+      "$default": {
+        "$source": "argv",
+        "index": 1
+      },
+      "x-prompt": {
+        "message": "What domain would you like to use?",
+        "type": "list",
+        "items": ["shared", "hr", "marketing", "inventory", "finance"]
+      }
     }
   },
   "required": ["name"]
