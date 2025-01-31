@@ -25,6 +25,19 @@
         "type": "list",
         "items": ["shared", "hr", "marketing", "inventory", "finance"]
       }
+    },
+    "type": {
+      "type": "string",
+      "description": "Domain of the Library",
+      "$default": {
+        "$source": "argv",
+        "index": 2
+      },
+      "x-prompt": {
+        "message": "What type would you like to use?",
+        "type": "list",
+        "items": ["ui", "data-access", "feature", "util", "all"]
+      }
     }
   },
   "required": ["name"]
